@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>MPTY 2015</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="../MPTOY/font-awesome-4.5.0/css/font-awesome.min.css">
+<link href="../MPTOY/main.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="../MPTOY/scripts/jquery.min.js"></script>
+<script type="text/javascript" src="../MPTOY/scripts/jquery.jplayer.min.js"></script>
+<script type="text/javascript" src="../MPTOY/scripts/jplayer.playlist.min.js"></script>
+<script type="text/javascript">
+    /*m4v is needed for safari; videos can be converted for free at :
+    http://firefogg.org/sites/index.html - for webm and ogv
+    http://www.convertfiles.com/convert/video/M4V-to-AVI.html - for safari
+    */
+//<![CDATA[
+$(document).ready(function(){
+
+	new jPlayerPlaylist({
+		jPlayer: "#jquery_jplayer_1",
+		cssSelectorAncestor: "#jp_container_1"
+	}, [
+		{
+			title:"Test",
+			artist:"Test",
+			free:true, //adds the text to the right that allows for users to download
+            m4v: "test.m4v",
+			ogv: "test.ogv",
+			webmv: "test.webm",
+			poster:"image/Picture1.png"
+		},
+		{
+			title:"Finding Nemo Teaser",
+			artist:"Pixar",
+			ogv: "http://www.jplayer.org/video/ogv/Finding_Nemo_Teaser.ogv",
+			webmv: "http://www.jplayer.org/video/webm/Finding_Nemo_Teaser.webm",
+			poster: "http://www.jplayer.org/video/poster/Finding_Nemo_Teaser_640x352.png"
+		},
+		{
+			title:"Incredibles Teaser",
+			artist:"Pixar",
+			m4v: "http://www.jplayer.org/video/m4v/Incredibles_Teaser.m4v",
+			ogv: "http://www.jplayer.org/video/ogv/Incredibles_Teaser.ogv",
+			webmv: "http://www.jplayer.org/video/webm/Incredibles_Teaser.webm",
+			poster: "http://www.jplayer.org/video/poster/Incredibles_Teaser_640x272.png"
+		}
+	], {
+		swfPath: "/scripts",
+		supplied: "webmv, ogv, m4v",
+		useStateClassSkin: true,
+		autoBlur: false,
+		smoothPlayBar: true,
+		keyEnabled: true
+	});
+
+});
+//]]>
+</script>
+</head>
+<body>
+<div id="jp_container_1" class="jp-video jp-video-270p" role="application" aria-label="media player">
+	<div class="jp-type-playlist">
+		<div style="width: 480px; height: 270px;" id="jquery_jplayer_1" class="jp-jplayer"><img src="../MPTOY/image/Picture1.png" style="width: 480px; height: 270px; display: inline;" id="jp_poster_0"><video title="test" src="test.webm" style="width: 0px; height: 0px;" preload="metadata" id="jp_video_0"></video></div>
+		<div class="jp-gui">
+			<div class="jp-interface">
+				<div class="jp-progress">
+					<div style="width: 100%;" class="jp-seek-bar">
+						<div style="width: 0%;" class="jp-play-bar"></div>
+					</div>
+				</div>
+				<div class="jp-current-time" role="timer" aria-label="time"></div>
+				<div class="jp-duration" role="timer" aria-label="duration"></div>
+				<div style="display: none;" class="jp-details">
+					<div class="jp-title" aria-label="title"></div>
+				</div>
+				<div class="jp-controls-holder">
+					<div class="jp-volume-controls">
+						<button class="jp-mute" role="button" tabindex="0"><span class="fa fa-volume-off fa-2x"></span></button>
+						<button class="jp-volume-max" role="button" tabindex="0"><span class="fa fa-volume-up fa-2x"></span></button>
+						<div class="jp-volume-bar">
+							<div style="width: 80%;" class="jp-volume-bar-value"></div>
+						</div>
+					</div>
+					<div class="jp-controls">
+						<button class="jp-previous" role="button" tabindex="0"><span class="fa fa-backward fa-2x"></span></button>
+                        <button class="jp-play" role="button" tabindex="0"><span class="fa fa-play-circle-o fa-2x"></span></button>
+						<button class="jp-stop" role="button" tabindex="0"><span class="fa fa-stop-circle-o fa-2x"></span></button>
+						<button class="jp-next" role="button" tabindex="0"><span class="fa fa-forward fa-2x"></span></button>
+					</div>
+					<div class="jp-toggles">
+						<button class="jp-full-screen" role="button" tabindex="0"><span class="fa fa-arrows-alt fa-2x"></span></button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="jp-playlist">
+			<ul style="display: block;">
+            <!-- This first line item is required if you want the video to preload-->
+                <li class="jp-playlist-current"><div><a style="display: none;" href="javascript:;" class="jp-playlist-item-remove">×</a><span class="jp-free-media">
+<!-- This is the text on the right side of the player that allows the user to choose witch format to use-->   (<a class="jp-playlist-item-free" href="test.m4v.m4v" tabindex="-1">m4v</a> | <a class="jp-playlist-item-free" href="test.ogv" tabindex="-1">ogv</a> | <a class="jp-playlist-item-free" href="test.webm" tabindex="-1">webmv</a>)</span><a href="javascript:;" class="jp-playlist-item jp-playlist-current" tabindex="0">Test <span class="jp-artist">by test</span></a></div></li>
+                <!-- This is what the server would need to write -->
+                <li><div><a style="display: none;" href="javascript:;" class="jp-playlist-item-remove">×</a><a href="javascript:;" class="jp-playlist-item" tabindex="0">Finding Nemo Teaser <span class="jp-artist">by Pixar</span></a></div></li>
+                <!-- @end@ -->
+                <li><div><a style="display: none;" href="javascript:;" class="jp-playlist-item-remove">×</a><a href="javascript:;" class="jp-playlist-item" tabindex="0">Incredibles Teaser <span class="jp-artist">by Pixar</span></a></div></li>
+            </ul>
+		</div>
+		<div style="display: none;" class="jp-no-solution">
+			<span>Update Required</span>
+			To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+		</div>
+	</div>
+</div>
+
+
+
+</body>
+</html>
